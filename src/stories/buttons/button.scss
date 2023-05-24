@@ -1,0 +1,411 @@
+@import "../styles/_variables";
+
+.dui-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: flex;
+  line-height: 1;
+  justify-content: space-between;
+
+  &.-medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  &.-small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  &.-large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+.disabled {
+  opacity: .65;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+.-default {
+  background-color: $white;
+  &.-default {
+    color: $default;
+  }
+  &.-default:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-default:active {
+    background: rgba(0,0,0,0.2);
+  }
+
+  &.-primary {
+    color: $primary;
+  }
+  &.-primary:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-primary:active {
+    filter: brightness(85%);
+  }
+
+  &.-info {
+    color: $info;
+  }
+  &.-info:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-info:active {
+    filter: brightness(85%);
+  }
+
+  &.-success {
+    color: $success;
+  }
+  &.-success:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-success:active {
+    filter: brightness(85%);
+  }
+
+  &.-warning {
+      color: $warning;
+  }
+  &-warning:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-warning:active {
+    filter: brightness(85%);
+  }
+
+  &.-error {
+      color: $error;
+  }
+  &.-error:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-error:active {
+    filter: brightness(85%);
+  }
+}
+
+.-raised {
+  box-shadow: 0 4px 4px 0 rgba(74,74,74,0.5);
+  color: $white;
+  background-color: $default;
+  &.--default {
+    color: $white;
+  }
+  &.--default:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(74,74,74,0.5);
+  }
+  &.--default:active {
+    filter: brightness(85%);
+  }
+
+  &.-primary {
+    background-color: $primary;
+  }
+  &.-primary:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(70,77,228,0.5);
+  }
+  &.-primary:active {
+    filter: brightness(85%);
+  }
+
+  &.-info {
+    background-color: $info;
+    box-shadow: 0 4px 4px 0 rgba(2,170,219,0.5);
+  }
+  &.-info:hover {
+      filter: brightness(125%) saturate(75%);
+      box-shadow: 0 2px 2px 0 rgba(2,170,219,0.5);
+  }
+  &.-info:active {
+    filter: brightness(85%);
+  }
+
+  &.-success {
+    background: $success;
+    box-shadow: 0 4px 7px 0 rgba(64,181,116,0.5);
+  }
+  &.-success:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(64,181,116,0.5);
+  }
+  &.-success:active {
+    filter: brightness(85%);
+  }
+
+  &.-warning {
+    background: $warning;
+    box-shadow: 0 4px 7px 0 rgba(255,153,1,0.5);
+  }
+  &.-warning:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(255,153,1,0.5);
+  }
+  &.-warning:active {
+    filter: brightness(85%);
+  }
+
+  &.-error {
+    background-color: $error;
+    box-shadow: 0 4px 7px 0 rgba(224,32,32,0.5);
+  }
+  &.-error:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(224,32,32,0.5);
+  }
+  &.-error:active {
+    filter: brightness(85%);
+  }
+}
+
+.-outlined {
+  color: $default;
+  border: 1px solid $default;
+  &.--default:hover, &.-primary:hover, &.-info:hover, &.-success:hover, &.-warning:hover, &.-error:hover {
+    color: $white;
+    background-position: left;
+  }
+  &.--default {
+    background: linear-gradient(to left, $white 50%, $default 50%) right;
+    background-size: 300%;
+    transition: .3s ease-out;
+  }
+  &.--default:hover {
+    box-shadow: 0 4px 7px 0 rgba(74,74,74,0.5);
+  }
+  &.--default:active {
+    filter: brightness(85%);
+  }
+
+  &.-primary {
+    color: $primary;
+    border: 1px solid $primary;
+    background: linear-gradient(to left, $white 50%, #1ea7fd 50%) right;
+    background-size: 300%;
+    transition: .3s ease-out;
+  }
+  &.-primary:hover {
+    box-shadow: 0 4px 7px 0 rgba(70,77,228,0.5);
+  }
+  &.-primary:active {
+      filter: brightness(85%);
+  }
+
+  &.-info {
+      color: $info;
+      border: 1px solid $info;
+      background: linear-gradient(to left, $white 50%, $info 50%) right;
+      background-size: 300%;
+      transition: .3s ease-out;
+  }
+  &.-info:hover {
+      box-shadow: 0 2px 2px 0 rgba(2,170,219,0.5);
+  }
+  &.-info:active {
+      filter: brightness(85%);
+  }
+
+  &.-success {
+      color: #40b574;
+      border: 1px solid #40b574;
+      background: linear-gradient(to left, #fff 50%, #40b574 50%) right;
+      background-size: 300%;
+      transition: .3s ease-out;
+  }
+  &.-success:hover {
+      box-shadow: 0 2px 2px 0 rgba(64,181,116,0.5);
+  }
+  &.-success:active {
+      filter: brightness(85%);
+  }
+
+  &.-warning {
+      color: #FF9901;
+      border: 1px solid #FF9901;
+      background: linear-gradient(to left, #fff 50%, #FF9901 50%) right;
+      background-size: 300%;
+      transition: .3s ease-out;
+  }
+  &.-warning:hover {
+      box-shadow: 0 2px 2px 0 rgba(255,153,1,0.5);
+  }
+  &.-warning:active {
+      filter: brightness(85%);
+  }
+
+  &.-error {
+      color: #e02020;
+      border: 1px solid #e02020;
+      background: linear-gradient(to left, #fff 50%, #e02020 50%) right;
+      background-size: 300%;
+      transition: .3s ease-out;
+  }
+  &.-error:hover {
+      box-shadow: 0 2px 2px 0 rgba(224,32,32,0.5);
+  }
+  &.-error:active {
+      filter: brightness(85%);
+  }
+}
+
+.-text {
+  text-transform: uppercase;
+  background: none;
+  &.--default {
+    color: $default;
+  }
+  &.--default:hover, &.-primary:hover, &.-info:hover, &.-success:hover, &.-warning:hover, &.-error:hover {
+    opacity: 0.8;
+  }
+  &.--default:active, &.-primary:active, &.-info:active, &.-success:active, &.-warning:active, &.-error:active {
+    opacity: 1.2;
+  }
+
+  &.-primary {
+    color: $primary;
+  }
+
+  &.-info {
+    color: $info;
+  }
+
+  &.-success {
+    color: $success;
+  }
+
+  &.-warning {
+    color: $warning;
+  }
+
+  &.-error {
+    color: $error;
+  }
+}
+
+.-squared {
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  &.--default {
+    color: $white;
+    background-color: $default;
+  }
+  &.--default:hover {
+    filter: brightness(125%) saturate(75%);
+    background-color: $default;
+    box-shadow: 0 2px 2px 0 rgba(74,74,74,0.5);
+  }
+  &.--default:active {
+    filter: brightness(85%);
+  }
+
+  &.-primary {
+      background-color: $primary;
+  }
+  &.-primary:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(70,77,228,0.5);
+  }
+  &.-primary:active {
+    filter: brightness(85%);
+  }
+
+  &.-info {
+    background-color: $info;
+  }
+  &.-info:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(2,170,219,0.5);
+  }
+  &.-info:active {
+    filter: brightness(85%);
+  }
+
+  &.-success {
+    background-color: $success;
+  }
+  &.-success:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(64,181,116,0.5);
+  }
+  &.-success:active {
+    filter: brightness(85%);
+  }
+
+  &.-warning {
+    background-color: $warning;
+  }
+  &.-warning:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(255,153,1,0.5);
+  }
+  &.-warning:active {
+    filter: brightness(85%);
+  }
+
+  &.-error {
+    background-color: $error;
+  }
+  &.-error:hover {
+    filter: brightness(125%) saturate(75%);
+    box-shadow: 0 2px 2px 0 rgba(224,32,32,0.5);
+  }
+  &.-error:active {
+    filter: brightness(85%);
+  }
+}
+
+.spinner-border {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: $white;
+  border-right-color: $white;
+  border-bottom-color: $white;
+  width: 8px;
+  height: 8px;
+  animation: spinner-border 1s linear infinite;
+  margin-right: 3px;
+}
+
+@keyframes spinner-border {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-grow {
+  border-radius: 50%;
+  background: #fff;
+  height: 15px;
+  width: 15px;
+  animation: spinner-grow .75s linear infinite;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+

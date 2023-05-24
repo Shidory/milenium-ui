@@ -1,0 +1,39 @@
+@import '../styles/variables';
+
+.mui-loader {
+  display: inline-flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.mui-loader--ball {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
+  border-radius: 40px;
+  background-color: $primary;
+  animation: bouncingLoader 1.4s ease-in-out infinite;
+}
+.mui-loader--ball:nth-child(1) { animation-delay: -.32s; }
+.mui-loader--ball:nth-child(2) { animation-delay: -.16s; }
+
+@keyframes bouncingLoader {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

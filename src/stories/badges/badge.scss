@@ -1,0 +1,89 @@
+@import "../styles/_variables";
+
+// .mui-badge {
+//   min-width: 20px;
+//   line-height: 1;
+//   margin-left: .25rem;
+//   transform: scale(0);
+//   opacity: .5;
+//   transition: .3s;
+//   z-index: 1;
+// }
+
+.mui-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  color: $white;
+  background-color: $default;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: .25rem;
+}
+
+.-default {
+  background-color: $default;
+  &.-default {
+    color: $white;
+  }
+  &.-default:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-default:active {
+    background: rgba(0,0,0,0.2);
+  }
+
+  &.-primary {
+    color: $primary;
+  }
+  &.-primary:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-primary:active {
+    filter: brightness(85%);
+  }
+
+  &.-info {
+    color: $info;
+  }
+  &.-info:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-info:active {
+    filter: brightness(85%);
+  }
+
+  &.-success {
+    color: $success;
+  }
+  &.-success:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-success:active {
+    filter: brightness(85%);
+  }
+
+  &.-warning {
+      color: $warning;
+  }
+  &-warning:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-warning:active {
+    filter: brightness(85%);
+  }
+
+  &.-error {
+      color: $error;
+  }
+  &.-error:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.-error:active {
+    filter: brightness(85%);
+  }
+}
