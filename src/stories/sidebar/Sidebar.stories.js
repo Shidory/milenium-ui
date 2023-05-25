@@ -50,34 +50,6 @@ Default.args = {
   label: 'Default',
 };
 
-export const Raised = Template.bind({});
-Raised.args = {
-  variant: 'raised',
-  size: 'medium',
-  label: 'Default',
-};
-
-export const Outlined = Template.bind({});
-Outlined.args = {
-  variant: 'outlined',
-  size: 'medium',
-  label: 'Default',
-};
-
-export const Text = Template.bind({});
-Text.args = {
-  variant: 'text',
-  size: 'medium',
-  label: 'Default',
-};
-
-export const Squared = Template.bind({});
-Squared.args = {
-  variant: 'squared',
-  size: 'medium',
-  label: 'Default',
-};
-
 // if (arrow.length) {
 //   for (let i = 0; i < arrow.length; i++) {
 //     arrow[i].addEventListener("click", (e)=>{

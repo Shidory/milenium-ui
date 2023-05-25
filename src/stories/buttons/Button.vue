@@ -10,7 +10,7 @@ import './button.scss';
 import { reactive, computed } from 'vue';
 
 export default {
-  name: 'DuiButton',
+  name: 'MuiButton',
 
   props: {
     label: {
@@ -53,12 +53,13 @@ export default {
       })),
 
       buttonVariant: computed(() => ({
-        "dui-button": true,
+        "mui-button": true,
         "-default": props.variant === "default",
         "-raised": props.variant === "raised",
         "-outlined": props.variant === "outlined",
         "-text": props.variant === "text",
         "-squared": props.variant === "squared",
+        "-icon-only": props.variant === "icon-only",
       })),
 
       buttonSize: computed(() => ({

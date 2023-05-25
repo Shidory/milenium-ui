@@ -1,8 +1,8 @@
-import DuiButton from './Button.vue';
+import MuiButton from './Button.vue';
 
 export default {
   title: 'Atoms/Button',
-  component: DuiButton,
+  component: MuiButton,
   argTypes: {
     onClick: {},
     size: {
@@ -34,13 +34,13 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { DuiButton },
+  components: { MuiButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<DuiButton v-bind="args" />',
+  template: '<MuiButton v-bind="args" />',
 });
 
 export const Default = Template.bind({});
@@ -76,4 +76,12 @@ Squared.args = {
   variant: 'squared',
   size: 'medium',
   label: 'Default',
+};
+
+export const iconOnly = Template.bind({});
+iconOnly.args = {
+  variant: 'icon-only',
+  size: 'medium',
+  label: 'X',
+  color: 'primary',
 };
