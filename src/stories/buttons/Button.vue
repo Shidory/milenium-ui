@@ -59,6 +59,7 @@ export default {
         "-outlined": props.variant === "outlined",
         "-text": props.variant === "text",
         "-squared": props.variant === "squared",
+        "-icon-only": props.variant === "icon-only",
       })),
 
       buttonSize: computed(() => ({

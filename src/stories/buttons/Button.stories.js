@@ -77,3 +77,11 @@ Squared.args = {
   size: 'medium',
   label: 'Default',
 };
+
+export const iconOnly = Template.bind({});
+iconOnly.args = {
+  variant: 'icon-only',
+  size: 'medium',
+  label: 'X',
+  color: 'primary',
+};

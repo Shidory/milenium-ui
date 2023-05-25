@@ -365,6 +365,29 @@
   }
 }
 
+.-icon-only {
+  padding: 0;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  &.--default {
+    color: $primary;
+  }
+  &.--default:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+  &.--default:active {
+    background: rgba(0,0,0,0.2);
+  }
+  &.-medium {
+    font-size: 14px;
+    padding: 11px;
+  }
+}
+
 .spinner-border {
   border: 2px solid transparent;
   border-radius: 50%;

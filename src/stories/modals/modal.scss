@@ -1,0 +1,45 @@
+@import "../styles/_variables";
+
+.mui-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.mui-card {
+  background-color: $white;
+  box-shadow: 0 1px 3px 2px rgba(0,0,0,0.08);
+  border-radius: 5px;
+  padding: 4px;
+  width: 300px;
+}
+
+.mui-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dde1ea;
+  margin: 1rem 1rem 0;
+  padding-bottom: 0.2rem;
+  font-size: 18px;
+}
+
+.mui-card-content {
+  padding: 1rem;
+}
+
+.mui-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+  margin: 0 1rem 1rem;
+}
+
+
+
