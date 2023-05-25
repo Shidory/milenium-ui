@@ -1,0 +1,38 @@
+@import "../styles/_variables";
+
+// *, ::before, ::after {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   height: 100vh;
+//   margin: 0;
+//   padding: 0;
+// }
+
+.mui-o-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  height: 100vh;
+}
+
+.header {
+  background-color: #f7d2d2;
+  grid-area: header;
+}
+
+.side-bar {
+  background-color: black;
+  grid-area: sidebar;
+}
+
+.main-content {
+  background-color: gray;
+  grid-area: main;
+}
