@@ -24,4 +24,5 @@ const Template = (args) => ({
 export const Default = Template.bind({});
 Default.args = {
   label: 'Succès : Message confirmation',
+  color: 'success'
 };
