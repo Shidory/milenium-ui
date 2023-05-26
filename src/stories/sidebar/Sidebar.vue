@@ -1,6 +1,6 @@
 <template>
   <div class="sidenav">
-    <a href="#about">About</a>
+    <router-link to="/">About</router-link>
     <a href="#services">Services</a>
     <button class="dropdown-btn">The first
       <i class="fa fa-caret-down"></i>
@@ -21,46 +21,27 @@
       <a href="#">Link 3</a>
     </div>
     <a href="#contact">Search</a>
-  </div> 
+  </div>
+  <!-- <container class="container"  style="height: 100%; padding: 20px; overflow-y: auto; background-color: blanchedalmond;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque amet rerum quisquam consequatur voluptatum delectus alias accusamus repellendus, praesentium, recusandae voluptas quasi accusantium dolorum minima doloribus tempora. Consequuntur, ipsa eius?
+    Ut, nisi consequuntur voluptates voluptate laudantium in animi possimus amet dicta rem blanditiis quas, incidunt, totam numquam commodi aliquam eaque praesentium sequi. Expedita nesciunt totam nisi incidunt, architecto velit odit.
+    Illum quibusdam totam magni necessitatibus aliquid reprehenderit iste, est inventore, odio aliquam in eius officiis maxime facilis minima magnam accusantium. Deserunt consequuntur dolor ex esse ratione nihil? Voluptas, repellendus cum!
+    Excepturi reprehenderit asperiores amet aut animi non molestias veritatis rerum libero blanditiis tenetur aliquid porro qui, ducimus eum alias debitis incidunt, dolores nesciunt laborum accusantium quod doloribus totam repellat? Aperiam!
+    Molestias, sapiente officia? Aspernatur magnam soluta dolorum, qui corporis officia maxime, fugit possimus impedit in porro explicabo doloremque quos et nobis cupiditate provident nostrum ipsa labore voluptate dignissimos voluptas. Animi.
+  </container> -->
 </template>
   
 <script>
 import './sidebar.scss';
-import { onMounted, reactive } from 'vue';
+import { onMounted } from 'vue';
 
 export default {
 name: 'MuiSidebar',
 
-props: {
-  label: {
-    type: String,
-    required: true,
-  },
-  color: {
-    type: String,
-  },
-  variant: {
-    type: String,
-  },
-  disabled: {
-    type: Boolean,
-  },
-  size: {
-    type: String,
-    validator: function (value) {
-      return ['small', 'medium', 'large'].indexOf(value) !== -1;
-    },
-  },
-  loading: {
-    type: Boolean,
-  },
-},
 
 emits: ['click'],
 
-setup(props, { emit }) {
-  props = reactive(props);
-
+setup({ emit }) {
   let dropdown = document.getElementsByClassName("dropdown-btn");
 
 
@@ -81,33 +62,6 @@ setup(props, { emit }) {
   })
 
   return {
-    buttonColor: computed(() => ({
-      "--default": props.color === "default",
-      "-primary": props.color === "primary",
-      "-info": props.color === "info",
-      "-success": props.color === "success",
-      "-warning": props.color === "warning",
-      "-error": props.color === "error",
-      "disabled": props.disabled,
-    })),
-
-    buttonVariant: computed(() => ({
-      "dui-button": true,
-      "-default": props.variant === "default",
-      "-raised": props.variant === "raised",
-      "-outlined": props.variant === "outlined",
-      "-text": props.variant === "text",
-      "-squared": props.variant === "squared",
-    })),
-
-    buttonSize: computed(() => ({
-      "-small": props.size === "small",
-      "-medium": props.size === "medium",
-      "-large": props.size === "large",
-    })),
-
-    isLoading: computed(() => props.loading ? "spinner-border" : false),
-
     dropdown,
 
     onClick() {
