@@ -1,8 +1,8 @@
-import MuiSidebar from './Sidebar.vue';
+import MuiSidenav from './Sidenav.vue';
 
 export default {
   title: 'Organisms/Sidenav',
-  component: MuiSidebar,
+  component: MuiSidenav,
   argTypes: {
     onClick: {},
     size: {
@@ -34,13 +34,13 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { MuiSidebar },
+  components: { MuiSidenav },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<MuiSidebar v-bind="args" />',
+  template: '<MuiSidenav v-bind="args" />',
 });
 
 export const Default = Template.bind({});
@@ -49,20 +49,4 @@ Default.args = {
   size: 'medium',
   label: 'Default',
 };
-
-// if (arrow.length) {
-//   for (let i = 0; i < arrow.length; i++) {
-//     arrow[i].addEventListener("click", (e)=>{
-//       console.log('here')
-//       let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-//       arrowParent.classList.toggle("showMenu");
-//     });
-//   }
-//   let sidebar = document.querySelector(".sidebar");
-//   let sidebarBtn = document.querySelector(".bx-menu");
-//   console.log(sidebarBtn);
-//   sidebarBtn.addEventListener("click", ()=>{
-//     sidebar.classList.toggle("close");
-//   });
-// }
 
