@@ -1,38 +1,48 @@
 @import "../styles/_variables";
 
-// *, ::before, ::after {
-//   box-sizing: border-box;
-//   margin: 0;
-//   padding: 0;
-// }
+ *, ::before, ::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
 
-// body {
-//   height: 100vh;
-//   margin: 0;
-//   padding: 0;
-// }
+.sb-show-main.sb-main-padded {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
 
 .mui-o-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 230px 1fr;
   grid-template-rows: 60px 1fr;
   grid-template-areas:
-    "sidebar header"
-    "sidebar main";
+    "sidenav header"
+    "sidenav main";
   height: 100vh;
 }
 
 .header {
-  background-color: #f7d2d2;
+  background-color: #ffffff;
   grid-area: header;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  //position: sticky;
+  //height: 60px;
+  //top: 0;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  left: 230px;
+  right: 0;
+  z-index: 1;
 }
 
-.side-bar {
-  background-color: black;
-  grid-area: sidebar;
+.sidenav {
+  grid-area: sidenav;
 }
 
 .main-content {
-  background-color: gray;
   grid-area: main;
+  padding: 20px;
+  background-color: #f4f7fd;
 }

@@ -32,7 +32,7 @@
 </template>
   
 <script>
-import './sidebar.scss';
+import './table.scss';
 import { onMounted } from 'vue';
 
 export default {
