@@ -5,6 +5,10 @@ export default {
   component: MuiModal,
   argTypes: {
     onClick: {},
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
+    },
   },
 };
 
@@ -18,5 +22,5 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Default',
+  size: 'small',
 };
