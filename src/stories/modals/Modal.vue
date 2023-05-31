@@ -1,7 +1,7 @@
 <template>
   <div class="mui-m-modal">
     <MuiOverlay />
-    <div class="mui-a-card mui-m-modal__container" :class="modalSize">
+    <MuiCard class="mui-m-modal__container" :class="modalSize">
       <div class="mui-m-modal__header">
         <div class="mui-m-modal__header__title">
           Nom de la modal
@@ -15,19 +15,24 @@
         <MuiButton label="Annnuler" variant="default" size="medium" color="default" />
         <MuiButton label="Confirmer" variant="raised" size="medium" color="primary" />
       </div>
-    </div>
+    </MuiCard>
   </div>
 </template>
 
 <script>
 import './modal.scss';
-import '../cards/card.scss';
 import MuiButton from '../buttons/Button.vue';
 import MuiOverlay from '../overlays/Overlay.vue';
+import MuiCard from '../cards/Card.vue';
 import { computed, reactive } from 'vue';
 
 export default {
   name: 'MuiModal',
+  components: {
+    MuiButton,
+    MuiOverlay,
+    MuiCard
+  },
   props: {
     size: {
       type: String,
@@ -35,10 +40,6 @@ export default {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
     },
-  },
-  components: {
-    MuiButton,
-    MuiOverlay
   },
 
   emits: ['click'],

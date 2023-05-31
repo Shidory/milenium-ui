@@ -1,6 +1,6 @@
 <template>
   <div class="mui-a-card">
-    Simple card
+    <slot></slot>
   </div>
 </template>
 
