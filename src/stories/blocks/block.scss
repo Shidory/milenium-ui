@@ -1,0 +1,23 @@
+@import "../styles/_variables";
+
+.mui-m-block {
+  flex: 1;
+  box-shadow: none;
+}
+
+.mui-m-block__divider {
+  margin: 0 16px;
+}
+
+.mui-m-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 16px 0 16px;
+}
+
+.mui-m-block__body {
+  padding: 18px 16px 16px 16px;
+  overflow: auto;
+}
