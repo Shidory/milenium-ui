@@ -1,5 +1,4 @@
 import MuiDivider from './Divider.vue';
-import {Raised} from "../buttons/Button.stories";
 
 export default {
   title: 'Atoms/Divider',

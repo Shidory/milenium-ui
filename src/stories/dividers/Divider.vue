@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 20px;">
+  <div>
     <hr role="separator" :class="dividerVariant">
   </div>
 </template>
