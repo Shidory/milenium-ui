@@ -1,40 +1,55 @@
 @import "../styles/_variables";
 
-.mui-modal {
+.mui-m-modal {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.5);
+  bottom: 0;
+  z-index: 2000;
 }
 
-.mui-card {
-  background-color: $white;
-  box-shadow: 0 1px 3px 2px rgba(0,0,0,0.08);
-  border-radius: 5px;
-  padding: 4px;
-  width: 300px;
+.mui-m-modal__container {
+  position: fixed;
+  width: auto;
+  z-index: 1400;
+  &.-small {
+    width: 25vw;
+  }
+  &.-medium {
+    width: 50vw;
+  }
+  &.-large {
+    width: 75vw;
+  }
 }
 
-.mui-card-header {
+.mui-m-modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #dde1ea;
   margin: 1rem 1rem 0;
-  padding-bottom: 0.2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #dde1ea;
   font-size: 18px;
+  color: #597582;
+  font-weight: bold;
 }
 
-.mui-card-content {
+.eui-m-modal__header__title {
+  flex: 1;
+}
+
+.mui-m-modal__content {
   padding: 1rem;
 }
 
-.mui-card-footer {
+.mui-m-modal__footer {
   display: flex;
   justify-content: flex-end;
   column-gap: 10px;

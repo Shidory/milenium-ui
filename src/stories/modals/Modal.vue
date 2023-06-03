@@ -1,36 +1,45 @@
 <template>
-  <div class="mui-modal">
-    <div class="mui-card">
-      <div class="mui-card-header">
-        <p>Nom de la card</p>
+  <div class="mui-m-modal">
+    <MuiOverlay />
+    <MuiCard class="mui-m-modal__container" :class="modalSize">
+      <div class="mui-m-modal__header">
+        <div class="mui-m-modal__header__title">
+          Nom de la modal
+        </div>
         <MuiButton label="X" variant="icon-only" size="medium" color="default" />
       </div>
-      <div class="mui-card-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor earum error ex ipsam natus nulla pariatur quos! Ab accusamus cumque deserunt esse itaque porro quia, quis ratione rem repellat soluta!
+      <div class="mui-m-modal__content">
+        Contenu de la modal
       </div>
-      <div class="mui-card-footer">
+      <div class="mui-m-modal__footer">
         <MuiButton label="Annnuler" variant="default" size="medium" color="default" />
         <MuiButton label="Confirmer" variant="raised" size="medium" color="primary" />
       </div>
-    </div>
+    </MuiCard>
   </div>
 </template>
 
 <script>
 import './modal.scss';
-import MuiButton from '../buttons/Button.vue'
-import { reactive } from 'vue';
+import MuiButton from '../buttons/Button.vue';
+import MuiOverlay from '../overlays/Overlay.vue';
+import MuiCard from '../cards/Card.vue';
+import { computed, reactive } from 'vue';
 
 export default {
   name: 'MuiModal',
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-  },
   components: {
-    MuiButton
+    MuiButton,
+    MuiOverlay,
+    MuiCard
+  },
+  props: {
+    size: {
+      type: String,
+      validator: function (value) {
+        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+      },
+    },
   },
 
   emits: ['click'],
@@ -38,6 +47,12 @@ export default {
   setup(props, { emit }) {
     props = reactive(props);
     return {
+      modalSize: computed(() => ({
+        "-small": props.size === "small",
+        "-medium": props.size === "medium",
+        "-large": props.size === "large",
+      })),
+
       onClick() {
         emit('click');
       }
