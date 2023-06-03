@@ -187,7 +187,7 @@
         provident voluptatum?
       </div>
     </main>
-    <MuiButton label="<<" variant="squared" color="primary" size="medium" style="position: fixed; left: 170px; top: 10px; z-index: 3;"></MuiButton>
+<!--    <MuiButton label="<<" variant="squared" color="primary" size="medium" style="position: fixed; left: 170px; top: 10px; z-index: 3;"></MuiButton>-->
   </div>
 </template>
 
